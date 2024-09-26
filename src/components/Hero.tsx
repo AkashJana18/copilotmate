@@ -30,13 +30,15 @@ const Hero = () => {
   return (
     <BackgroundBeamsWithCollision>
       <div className="h-[40rem] flex flex-col justify-center items-center px-4">
-        <div className="text-6xl mx-auto font-bold text-neutral-600 dark:text-neutral-400">
+        <div className="leading-tight text-6xl mx-auto font-bold  dark:text-neutral-400 ">
           <FlipWords words={firstWords} />
           Your <FlipWords words={thirdWords} /> <br />
           with{" "}
           <span className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
             CopilotMate
           </span>
+          <br />
+          <span className="dark:text-neutral-100" >Your Personal AI Assitant</span>
         </div>
         <button className="p-[3px] relative m-10">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 rounded-lg" />
