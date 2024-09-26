@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { FloatingDockDemo } from "@/components/FloatingDock";
 
 export const metadata: Metadata = {
   title: "CopilotMate",
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={montserrat.className}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingDockDemo />
+      </body>
     </html>
   );
 }
