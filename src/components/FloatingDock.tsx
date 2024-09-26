@@ -32,7 +32,7 @@ export function FloatingDockDemo() {
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
-    },
+    }, 
     {
       title: "Changelog",
       icon: (
@@ -57,7 +57,7 @@ export function FloatingDockDemo() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
+    <div className="flex items-center justify-center fixed bottom-12 inset-x-0 mx-auto ">
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
