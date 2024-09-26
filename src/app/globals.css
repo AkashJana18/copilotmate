@@ -21,6 +21,12 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: .4rem; /* Width of the scrollbar */

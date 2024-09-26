@@ -75,7 +75,7 @@ const Features = () => {
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {feature.title}
                 </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold">
+                <p className="text-start text-slate-300 mt-3 font-semibold">
                   {feature.description}
                 </p>
               </div>
