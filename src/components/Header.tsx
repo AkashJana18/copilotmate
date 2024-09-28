@@ -24,8 +24,8 @@ const Header = () => {
   };
   return (
     <div className="m-2 px-2 flex items-center justify-between" id="header">
-      <span className="text-3xl font-bold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
-        CopilotMate
+      <span className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+        CM
       </span>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}

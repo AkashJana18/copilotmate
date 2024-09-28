@@ -20,6 +20,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 img {
   -webkit-user-drag: none;
@@ -31,6 +34,7 @@ img {
 ::-webkit-scrollbar {
   width: .4rem; /* Width of the scrollbar */
 }
+
 
 ::-webkit-scrollbar-track {
   background: transparent; /* Track background */
