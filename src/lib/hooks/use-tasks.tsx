@@ -20,7 +20,7 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
 
   useCopilotReadable({
     description: "The state of the todo list",
-    value: JSON.stringify(tasks),
+    value: tasks,
   });
 
   useCopilotAction({
@@ -36,6 +36,7 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
     ],
     handler: ({ title }) => {
       addTask(title);
+      return "Task added successfully";
     }
   });
 
@@ -46,12 +47,13 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
       {
         name: "id",
         type: "number",
-        description: "The id of the task",
+        description: "The id of the task to delete",
         required: true,
       },
     ],
     handler: ({ id }) => {
       deleteTask(id);
+      return "Task deleted successfully";
     }
   });
 
@@ -75,6 +77,7 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
     ],
     handler: ({ id, status }) => {
       setTaskStatus(id, status);
+      return "Set status successfull";
     }
   });
 
