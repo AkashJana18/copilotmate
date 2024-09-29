@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <BackgroundBeamsWithCollision>
       <div className="h-[40rem] flex flex-col justify-center items-center px-4">
-        <div className="leading-tight text-6xl mx-auto font-bold  dark:text-neutral-400 ">
+        <div className="leading-tight text-6xl mx-auto font-bold  dark:text-neutral-400 hover:text-white">
           <FlipWords words={firstWords} />
           Your <FlipWords words={thirdWords} /> <br />
           with{" "}
-          <span className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+          <span className="purple-pink-gradient py-4">
             CopilotMate
           </span>
           <br />Your Personal{" "}
