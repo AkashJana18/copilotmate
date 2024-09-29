@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { FloatingDockDemo } from "@/components/FloatingDock";
-import Footer from "@/components/Footer";
+import { FloatingDockDemo } from "@/components/Home/FloatingDock";
+import Footer from "@/components/Home/Footer";
 import { CopilotKit } from "@copilotkit/react-core";
 import { CopilotPopup } from "@copilotkit/react-ui";
 import "@copilotkit/react-ui/styles.css";
-import Header from "@/components/Header";
+import Header from "@/components/Home/Header";
 
 export const metadata: Metadata = {
   title: "CopilotMate",
