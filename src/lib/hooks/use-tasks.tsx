@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useCopilotAction, useCopilotReadable } from "@copilotkit/react-core";
 import { createContext, useContext, useState, ReactNode } from "react";
 import { defaultTasks } from "../default-tasks";
@@ -34,9 +34,9 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ title }: { title: string }) => {
+    handler: ({ title }) => {
       addTask(title);
-    },
+    }
   });
 
   useCopilotAction({
@@ -50,15 +50,9 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ id }: { id: number }) => {
-      const taskId = Number(id); // Ensure id is a number
-      if (!isNaN(taskId)) {
-        deleteTask(taskId);
-        return `Task with ID ${taskId} deleted successfully`;
-      } else {
-        throw new Error("Invalid task ID");
-      }
-    },
+    handler: ({ id }) => {
+      deleteTask(id);
+    }
   });
 
   useCopilotAction({
@@ -79,15 +73,9 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ id, status }: { id: number; status: string }) => {
-      const taskId = Number(id); // Ensure id is a number
-      if (!isNaN(taskId)) {
-        setTaskStatus(taskId, status as TaskStatus);
-        return `Task with ID ${taskId} status updated to ${status}`;
-      } else {
-        throw new Error("Invalid task ID");
-      }
-    },
+    handler: ({ id, status }) => {
+      setTaskStatus(id, status);
+    }
   });
 
   const addTask = (title: string) => {
@@ -105,7 +93,7 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
   const deleteTask = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
-
+  
   return (
     <TasksContext.Provider value={{ tasks, addTask, setTaskStatus, deleteTask }}>
       {children}
