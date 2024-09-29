@@ -3,9 +3,6 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { FloatingDockDemo } from "@/components/Home/FloatingDock";
 import Footer from "@/components/Home/Footer";
-import { CopilotKit } from "@copilotkit/react-core";
-import { CopilotPopup } from "@copilotkit/react-ui";
-import "@copilotkit/react-ui/styles.css";
 import Header from "@/components/Home/Header";
 
 export const metadata: Metadata = {
@@ -27,12 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <CopilotKit runtimeUrl="/api/copilotkit/runtime">
           <Header />
           {children}
           <FloatingDockDemo />
           <Footer />
-        </CopilotKit>
       </body>
     </html>
   );

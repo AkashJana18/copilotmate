@@ -7,7 +7,7 @@ import "@copilotkit/react-ui/styles.css";
 const Todo = () => {
   return (
     <>
-      <CopilotKit runtimeUrl="/api/copilotkit/runtime">
+      <CopilotKit runtimeUrl="/api/copilotkit">
         <TasksProvider>
           <TasksList />
         </TasksProvider>

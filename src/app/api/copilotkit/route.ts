@@ -12,11 +12,11 @@ const serviceAdapter = new GroqAdapter({
   model: "llama3-groq-8b-8192-tool-use-preview",
 });
 
-const runtime = new CopilotRuntime();
+const copilotkit = new CopilotRuntime();
 
 export const POST = async (req: NextRequest) => {
   const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({
-    runtime:runtime,
+    runtime:copilotkit,
     serviceAdapter,
     endpoint: "/api/copilotkit",
   });
