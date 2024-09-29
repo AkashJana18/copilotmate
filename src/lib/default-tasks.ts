@@ -13,7 +13,7 @@ export const defaultTasks: Task[] = [
   },
   {
     id: 3,
-    title: "Prepare presentation slides",
+    title: "Vote this project on Quira",
     status: TaskStatus.todo,
   },
   {

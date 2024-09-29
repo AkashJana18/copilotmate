@@ -20,10 +20,18 @@ export function AddTodo() {
           onChange={(e) => setTitle(e.target.value)}
           type="text"
           placeholder="Add a new todo..."
-          className="flex-1 mr-2 bg-muted text-muted-foreground rounded-md px-4 py-2"
+          className="flex-1 mr-2 bg-muted text-white-300 rounded-md px-4 py-2 bg-slate-800"
         />
-        <Button type="submit" disabled={!title} onClick={handleAddTask}>
-          Add
+        <Button
+          type="submit"
+          disabled={!title}
+          onClick={handleAddTask}
+          className="p-[3px] relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-green-300 rounded-lg" />
+          <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            Add
+          </div>
         </Button>
       </div>
     </form>
