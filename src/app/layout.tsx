@@ -32,7 +32,6 @@ export default function RootLayout({
           {children}
           <FloatingDockDemo />
           <Footer />
-          <CopilotPopup />
         </CopilotKit>
       </body>
     </html>
