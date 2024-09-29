@@ -1,31 +1,9 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { FlipWords } from "@/components/ui/flip-words";
+import { firstWords, thirdWords } from "@/data";
 
 const Hero = () => {
-  const firstWords = [
-    "Streamline",
-    "Optimize",
-    "Elevate",
-    "Automate",
-    "Facilitate",
-    "Boost",
-    "Simplify",
-    "Revolutionize",
-    "Maximize",
-    "Personalize",
-  ];
-  const thirdWords = [
-    "Processes",
-    "Efficiency",
-    "Projects",
-    "Routine",
-    "Collaboration",
-    "Performance",
-    "Work",
-    "Approach",
-    "Potential",
-    "Experience",
-  ];
+
 
   return (
     <BackgroundBeamsWithCollision>
