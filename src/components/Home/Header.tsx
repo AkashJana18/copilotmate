@@ -4,7 +4,6 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-van
 import { placeholders } from "@/data";
 
 const Header = () => {
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   };
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,9 +12,9 @@ const Header = () => {
   };
   return (
     <div className="m-2 px-2 flex items-center justify-between" id="header">
-      <span className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+      <a href="http://localhost:3000" className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
         CM
-      </span>
+      </a>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
