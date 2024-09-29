@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <CopilotKit runtimeUrl="/api/copilotkit">
+        <CopilotKit runtimeUrl="/api/copilotkit/runtime">
           <Header />
           {children}
           <FloatingDockDemo />

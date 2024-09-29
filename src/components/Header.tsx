@@ -1,20 +1,9 @@
 "use client";
 import React from "react";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
+import { placeholders } from "@/data";
 
 const Header = () => {
-  const placeholders = [
-    "What can CopilotMate help you with today?",
-    "Ask me anything!",
-    "Looking for something specific?",
-    "Type your task or question...",
-    "Need help organizing your day?",
-    "Start typing to plan smarter...",
-    "What would you like to do?",
-    "How can I assist you?",
-    "Let me find that for you...",
-    "What’s on your mind?",
-  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   };

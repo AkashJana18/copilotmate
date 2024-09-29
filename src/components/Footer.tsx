@@ -1,23 +1,8 @@
 import React from "react";
+import { socialMedia } from "@/data";
 
 const Footer = () => {
-  const socialMedia = [
-    {
-      id: 1,
-      img: "/git.svg",
-      href: "https://github.com/AkashJana18",
-    },
-    {
-      id: 2,
-      img: "/twit.svg",
-      href: "https://x.com/Akashj_01",
-    },
-    {
-      id: 3,
-      img: "/link.svg",
-      href: "https://www.linkedin.com/in/akashjana",
-    },
-  ];
+
   return (
     <div className="w-full p-10 bg-gradient-to-t from-indigo-500" id="footer">
       <hr className="text-slate-500" />
