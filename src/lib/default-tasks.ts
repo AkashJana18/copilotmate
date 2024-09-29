@@ -3,27 +3,27 @@ import { Task, TaskStatus } from "./tasks.types";
 export const defaultTasks: Task[] = [
   {
     id: 1,
-    title: "Complete project proposal",
-    status: TaskStatus.done,
+    title: "Study for upcoming test.",
+    status: TaskStatus.todo,
   },
   {
     id: 2,
-    title: "Review design mockups",
+    title: "Solve DSA questions",
     status: TaskStatus.done,
   },
   {
     id: 3,
-    title: "Prepare presentation slides",
+    title: "Vote this project on Quira",
     status: TaskStatus.todo,
   },
   {
     id: 4,
-    title: "Send meeting notes email",
+    title: "Prepare youtube video for quira submission.",
     status: TaskStatus.todo,
   },
   {
     id: 5,
-    title: "Review Uli's pull request",
+    title: "Submit repo on quira.",
     status: TaskStatus.todo,
   },
 ];

@@ -16,11 +16,16 @@ export function Task({ task: { id, title, status } }: { task: Task }) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="flex items-center gap-4 p-2 rounded-md bg-muted"
+      className="flex items-center gap-4 p-2 rounded-md "
     >
       <Checkbox
         id={`task_${id}`}
-        onClick={() => setTaskStatus(id, status === TaskStatus.done ? TaskStatus.todo : TaskStatus.done)}
+        onClick={() =>
+          setTaskStatus(
+            id,
+            status === TaskStatus.done ? TaskStatus.todo : TaskStatus.done
+          )
+        }
         checked={status === TaskStatus.done}
       />
       <div className="text-sm text-neutral-500 font-medium">TASK-{id}</div>
@@ -34,7 +39,9 @@ export function Task({ task: { id, title, status } }: { task: Task }) {
         {title}
       </Label>
       <Button variant="ghost" size="sm" onClick={() => deleteTask(id)}>
-        <TrashIcon className="w-4 h-4" />
+        <div className="hover:bg-red-500 m-1 p-1 rounded-lg">
+          <TrashIcon className="w-5 h-5" />
+        </div>
         <span className="sr-only">Delete</span>
       </Button>
     </motion.div>

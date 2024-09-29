@@ -9,9 +9,12 @@ import { AnimatePresence } from "framer-motion";
 export function TasksList() {
   const { tasks } = useTasks();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
-      <div className="flex flex-col gap-4 min-w-full md:min-w-[500px]">
-        <h1 className="text-2xl font-bold">✍️ My Todos</h1>
+    <main className="flex flex-col items-center justify-between">
+      <div className="flex flex-col gap-4 min-w-full w-auto px-40">
+        <h1 className="text-4xl font-bold text-center my-5 flex justify-center items-center gap-5">
+          <img src="/event-list.png" alt="" width={60} height={60} />
+          <span className="purple-pink-gradient font-bold">To-Do</span> List
+        </h1>
         <AddTodo />
 
         <AnimatePresence>
@@ -23,7 +26,9 @@ export function TasksList() {
               return a.status === TaskStatus.todo ? -1 : 1;
             })
             .map((task) => (
-              <Task key={task.id} task={task} />
+              <div className="hover:bg-slate-800 rounded-lg">
+                <Task key={task.id} task={task} />
+              </div>
             ))}
         </AnimatePresence>
       </div>
