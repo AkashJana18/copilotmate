@@ -8,14 +8,14 @@ import { Suspense } from "react";
 const Todo = () => {
   return (
     <>
-      <CopilotKit runtimeUrl="/api/copilotkit">
-        <Suspense>
+      <Suspense>
+        <CopilotKit runtimeUrl="/api/copilotkit">
           <TasksProvider>
             <TasksList />
           </TasksProvider>
           <CopilotPopup />
-        </Suspense>
-      </CopilotKit>
+        </CopilotKit>
+      </Suspense>
     </>
   );
 };

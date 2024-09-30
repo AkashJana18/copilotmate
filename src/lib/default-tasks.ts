@@ -8,8 +8,8 @@ export const defaultTasks: Task[] = [
   },
   {
     id: 2,
-    title: "Solve DSA questions",
-    status: TaskStatus.done,
+    title: "Solve 3 DSA questions",
+    status: TaskStatus.completed,
   },
   {
     id: 3,
