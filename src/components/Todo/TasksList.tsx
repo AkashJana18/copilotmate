@@ -26,7 +26,7 @@ export function TasksList() {
               return a.status === TaskStatus.todo ? -1 : 1;
             })
             .map((task) => (
-              <div className="hover:bg-slate-800 rounded-lg">
+              <div className="hover:bg-neutral-800 rounded-lg">
                 <Task key={task.id} task={task} />
               </div>
             ))}

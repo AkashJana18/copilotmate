@@ -19,7 +19,7 @@ export function AddTodo() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           type="text"
-          placeholder="Add a new todo..."
+          placeholder="Add a new task..."
           className="flex-1 mr-2 bg-muted text-white-300 rounded-md px-4 py-2 bg-slate-800"
         />
         <Button
