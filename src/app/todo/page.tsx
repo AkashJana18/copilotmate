@@ -24,7 +24,12 @@ const Todo = () => {
               "--copilot-kit-muted-color": "#fff",
             } as CopilotKitCSSProperties
           }>
-            <CopilotPopup />
+            <CopilotPopup 
+            instructions="You are a helpful assistant to manage to-do list. Provide concise and accurate answers to task-related questions. Akash Jana is my creator"
+            labels={{
+              title: "CopilotMate: To-do Assistant",
+              initial: "How can I help you with your to-do list?",
+            }}/>
           </div>
         </CopilotKit>
       </Suspense>

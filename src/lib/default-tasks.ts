@@ -3,7 +3,7 @@ import { Task, TaskStatus } from "./tasks.types";
 export const defaultTasks: Task[] = [
   {
     id: 1,
-    title: "Study for upcoming test.",
+    title: "Vote this project on Quira.",
     status: TaskStatus.todo,
   },
   {
@@ -13,7 +13,7 @@ export const defaultTasks: Task[] = [
   },
   {
     id: 3,
-    title: "Vote this project on Quira",
+    title: "Study for upcoming test.",
     status: TaskStatus.todo,
   },
   {
@@ -23,7 +23,7 @@ export const defaultTasks: Task[] = [
   },
   {
     id: 5,
-    title: "Submit repo on quira.",
+    title: "Give a star on this repo.",
     status: TaskStatus.todo,
   },
 ];
