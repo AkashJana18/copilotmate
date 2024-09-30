@@ -31,6 +31,16 @@ const Hero = () => {
               </span>
             </button>
           </Link>
+          <Link href="#">
+            <button className="bg-neutral-200 dark:bg-neutral-800 dark:text-white text-black flex justify-center group relative overflow-hidden mx-10 px-3 py-2 border-2 border-solid border-red-500 rounded-lg">
+              <span className="group-hover:translate-x-40 text-center transition duration-500">
+                Watch <span className="text-red-500 font-semibold">Demo</span>
+              </span>
+              <div className="-translate-x-40 group-hover:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                <img src="/youtube.png" alt="" width={50}/>
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </BackgroundBeamsWithCollision>
