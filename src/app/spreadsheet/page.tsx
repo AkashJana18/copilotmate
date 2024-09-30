@@ -9,7 +9,7 @@ import {
   useCopilotAction,
   useCopilotReadable,
 } from "@copilotkit/react-core";
-import { CopilotSidebar } from "@copilotkit/react-ui";
+import { CopilotKitCSSProperties, CopilotSidebar } from "@copilotkit/react-ui";
 import { INSTRUCTIONS } from "./instructions";
 import { canonicalSpreadsheetData } from "@/components/Spreadsheet/canonicalSpreadsheetData";
 import { SpreadsheetData } from "@/components/Spreadsheet/type";
@@ -18,16 +18,29 @@ import { PreviewSpreadsheetChanges } from "@/components/Spreadsheet/PreviewSprea
 const HomePage = () => {
   return (
     <CopilotKit runtimeUrl="/api/copilotkit">
+      <div 
+       style={
+        {
+          "--copilot-kit-primary-color": "#222222",
+          "--copilot-kit-background-color": "#555555",
+          "--copilot-kit-response-button-background-color": "#444444",
+          "--copilot-kit-response-button-color": "#fff",
+          "--copilot-kit-separator-color": "#666666",
+          "--copilot-kit-muted-color": "#fff",
+        } as CopilotKitCSSProperties
+      }>
       <CopilotSidebar
         instructions={INSTRUCTIONS}
         labels={{
-          initial: "Welcome to the spreadsheet app! How can I help you?",
+          title: "CopilotMate",
+          initial: "Welcome to the AI-assisted spreadsheet! How can I help you?",
         }}
         defaultOpen={true}
         clickOutsideToClose={false}
       >
         <Main />
       </CopilotSidebar>
+      </div>
     </CopilotKit>
   );
 };
