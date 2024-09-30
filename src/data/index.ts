@@ -1,3 +1,67 @@
+export const faq = [
+  {
+    id: "0",
+    question: "What features are available in CopilotMate right now?",
+    answer:
+      "Currently, the to-do list, spreadsheet, and chatbot features are ready for use. Other features, like expense tracking and calendar tools, are still in development.",
+  },
+  {
+    id: "1",
+    question: "Is CopilotMate open-source?",
+    answer:
+      "Yes, CopilotMate is fully open-source. You can contribute to its development, report bugs, or suggest features via our GitHub repository.",
+  },
+  {
+    id: "2",
+    question: "Can I contribute to CopilotMate?",
+    answer:
+      "Absolutely! CopilotMate is open-source, and we welcome contributions. You can help by submitting pull requests, reporting bugs, or suggesting improvements.",
+  },
+  {
+    id: "3",
+    question: "How can I get started with CopilotMate?",
+    answer:
+      "You can get started by watching the demo video or by visiting our GitHub page to access the codebase. Follow the instructions to set up CopilotMate and start using the available features.",
+  },
+  {
+    id: "4",
+    question: "Can I customize CopilotMate?",
+    answer:
+      "Yes! Since CopilotMate is open-source, you can modify the code to fit your personal or project needs.",
+  },
+  {
+    id: "5",
+    question: "What are the upcoming features in CopilotMate?",
+    answer:
+      "Some upcoming features include expense tracking, calendar integration, study tools, and quiz creation. Stay tuned for regular updates as we continue to develop.",
+  },
+  {
+    id: "6",
+    question: "Is CopilotMate suitable for teams?",
+    answer:
+      "Currently, CopilotMate is focused on individual use, but we may add team collaboration features in future updates.",
+  },
+  {
+    id: "7",
+    question: "Will CopilotMate always be free?",
+    answer:
+      "Yes, CopilotMate is open-source and free to use. You can access the codebase, contribute to development, or customize it as per your needs.",
+  },
+  {
+    id: "8",
+    question: "How can I report an issue or bug?",
+    answer:
+      "You can report issues directly through our GitHub repository by opening a new issue. We appreciate all feedback and contributions!",
+  },
+  {
+    id: "9",
+    question: "Do you have any corporate or enterprise plans?",
+    answer:
+      "At the moment, CopilotMate is focused on individual users, but we're open to expanding based on community feedback.",
+  },
+];
+
+
 export const firstWords = [
   "Streamline",
   "Optimize",
