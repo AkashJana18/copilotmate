@@ -25,9 +25,9 @@ export function TasksList() {
               }
               return a.status === TaskStatus.todo ? -1 : 1;
             })
-            .map((task) => (
+            .map((task, index) => (
               <div className="hover:bg-neutral-800 rounded-lg">
-                <Task key={task.id} task={task} />
+                <Task key={index} task={task} />
               </div>
             ))}
         </AnimatePresence>
