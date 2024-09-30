@@ -10,7 +10,7 @@ export function TasksList() {
   const { tasks } = useTasks();
   return (
     <main className="flex flex-col items-center justify-between">
-      <div className="flex flex-col gap-4 min-w-full w-auto px-40">
+      <div className="flex flex-col gap-4 min-h-[305px] min-w-full w-auto px-40">
         <h1 className="text-4xl font-bold text-center my-5 flex justify-center items-center gap-5">
           <img src="/event-list.png" alt="" width={60} height={60} />
           <span className="purple-pink-gradient font-bold">To-Do</span> List
@@ -25,9 +25,9 @@ export function TasksList() {
               }
               return a.status === TaskStatus.todo ? -1 : 1;
             })
-            .map((task) => (
-              <div className="hover:bg-slate-800 rounded-lg">
-                <Task key={task.id} task={task} />
+            .map((task, index) => (
+              <div className="hover:bg-neutral-800 rounded-lg">
+                <Task key={index} task={task} />
               </div>
             ))}
         </AnimatePresence>

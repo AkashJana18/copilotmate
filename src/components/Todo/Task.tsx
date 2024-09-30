@@ -23,17 +23,18 @@ export function Task({ task: { id, title, status } }: { task: Task }) {
         onClick={() =>
           setTaskStatus(
             id,
-            status === TaskStatus.done ? TaskStatus.todo : TaskStatus.done
+            status === TaskStatus.completed ? TaskStatus.todo : TaskStatus.completed
           )
         }
-        checked={status === TaskStatus.done}
+        checked={status === TaskStatus.completed}
+        className="ml-4"
       />
       <div className="text-sm text-neutral-500 font-medium">TASK-{id}</div>
       <Label
         htmlFor={`task_${id}`}
         className={cn(
           "flex-1 text-sm text-muted-foreground",
-          status === TaskStatus.done && "line-through"
+          status === TaskStatus.completed && "line-through"
         )}
       >
         {title}

@@ -19,8 +19,8 @@ export function AddTodo() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           type="text"
-          placeholder="Add a new todo..."
-          className="flex-1 mr-2 bg-muted text-white-300 rounded-md px-4 py-2 bg-slate-800"
+          placeholder="Add a new task..."
+          className="flex-1 mr-2 bg-muted text-white-300 rounded-md px-4 py-2 bg-neutral-800 border-none"
         />
         <Button
           type="submit"

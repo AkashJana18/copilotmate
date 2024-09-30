@@ -34,10 +34,11 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ title }) => {
+    handler: async ({ title }) => {
       addTask(title);
       return "Task added successfully";
-    }
+    },
+    render: "Processing..."
   });
 
   useCopilotAction({
@@ -51,10 +52,11 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ id }) => {
+    handler: async ({ id }) => {
       deleteTask(id);
       return "Task deleted successfully";
-    }
+    },
+    render: "Processing..."
   });
 
   useCopilotAction({
@@ -75,10 +77,11 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         required: true,
       },
     ],
-    handler: ({ id, status }) => {
+    handler: async ({ id, status }) => {
       setTaskStatus(id, status);
       return "Set status successfull";
-    }
+    },
+    render: "Processing..."
   });
 
   const addTask = (title: string) => {
