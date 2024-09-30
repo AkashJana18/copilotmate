@@ -1,52 +1,9 @@
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/moving-border";
+import { copilotMateFeatures } from "@/data";
 
 const Features = () => {
-  const copilotMateFeatures = [
-    {
-      title: "Expenses Tracker",
-      description: "Easily monitor and manage your expenses with real-time tracking and detailed reports.",
-      thumbnail: "/accounting.png"
-
-    },
-    {
-      title: "Calendars",
-      description: "Create, manage, and sync calendars for effortless scheduling and time management.",
-      thumbnail: "/product-release.png"
-    },
-    {
-      title: "To-Do List",
-      description: "Organize tasks, set priorities, and get reminders with CopilotMate's to-do list feature.",
-      thumbnail: "/event-list.png"
-    },
-    {
-      title: "Study Assistant",
-      description: "Use tools like flashcards, notes, and study reminders to stay on track academically.",
-      thumbnail: "/reading.png"
-    },
-    {
-      title: "Interactive Resume",
-      description: "Tailor your resume with AI suggestions, making it job-ready and customized for each role.",
-      thumbnail: "/cv.png"
-    },
-    {
-      title: "AI ChatBot",
-      description: "Get real-time assistance through a smart AI chatbot that helps with tasks, queries, and more.",
-      thumbnail: "/chat-app.png"
-    },
-    {
-      title: "Goals Tracker",
-      description: "Set goals and track your progress, staying motivated in fitness, work, or personal life.",
-      thumbnail: "/leadership.png"
-    },
-    {
-      title: "Customizable Workflows",
-      description: "Create workflows that suit your day-to-day needs, tailored to your lifestyle or profession.",
-      thumbnail: "/workflow.png"
-    }
-  ];
-  
 
   return (
     <div className="p-10" id="features">

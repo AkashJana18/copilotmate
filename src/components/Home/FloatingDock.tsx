@@ -2,11 +2,11 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
-  IconBrandX,
-  IconExchange,
+  IconClipboardList,
+  IconFileSpreadsheet,
   IconHome,
-  IconNewSection,
   IconTerminal2,
+  IconTimeDurationOff,
 } from "@tabler/icons-react";
 
 export function FloatingDockDemo() {
@@ -16,35 +16,35 @@ export function FloatingDockDemo() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
-      title: "Products",
+      title: "Chatbot",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/chat",
     },
     {
-      title: "Components",
+      title: "Spreadsheet",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconFileSpreadsheet className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/spreadsheet",
     }, 
     {
-      title: "Changelog",
+      title: "Todo list",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconClipboardList className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/todo",
     },
 
     {
-      title: "Twitter",
+      title: "Vote",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconTimeDurationOff className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
@@ -53,7 +53,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/AkashJana18/copilotmate",
     },
   ];
   return (

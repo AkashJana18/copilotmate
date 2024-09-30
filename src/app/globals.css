@@ -5,9 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --gradient-purple: #a855f7;  /* from-purple-500 */
-  --gradient-violet: #8b5cf6;  /* via-violet-500 */
-  --gradient-pink: #ec4899;     /* to-pink-500 */
+  --gradient-purple: #a855f7; /* from-purple-500 */
+  --gradient-violet: #8b5cf6; /* via-violet-500 */
+  --gradient-pink: #ec4899; /* to-pink-500 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +20,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 img {
   -webkit-user-drag: none;
@@ -29,7 +32,7 @@ img {
 }
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: .4rem; /* Width of the scrollbar */
+  width: 0.4rem; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -37,25 +40,46 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-violet), var(--gradient-pink)); /* Custom gradient */
-  border-radius: .4rem; /* Optional: Rounded corners */
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-purple),
+    var(--gradient-violet),
+    var(--gradient-pink)
+  ); /* Custom gradient */
+  border-radius: 0.4rem; /* Optional: Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-pink)); /* Change on hover */
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-purple),
+    var(--gradient-pink)
+  ); /* Change on hover */
 }
 
 ::-moz-scrollbar {
-  width: .4rem; /* Width for Firefox */
+  width: 0.4rem; /* Width for Firefox */
 }
 
 ::-moz-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-violet), var(--gradient-pink));
-  border-radius: .4rem;
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-purple),
+    var(--gradient-violet),
+    var(--gradient-pink)
+  );
+  border-radius: 0.4rem;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .purple-pink-gradient {
+    position: relative; /* 'relative' */
+    background-clip: text; /* 'bg-clip-text' */
+    color: transparent; /* 'text-transparent' */
+    background-repeat: no-repeat; /* 'bg-no-repeat' */
+    background-image: linear-gradient(to right, #a855f7, #8b5cf6, #ec4899);
   }
 }
