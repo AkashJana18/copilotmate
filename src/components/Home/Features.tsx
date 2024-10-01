@@ -9,7 +9,7 @@ const Features = () => {
   
 
   return (
-    <div className="p-10" id="features my-10">
+    <div className="p-10 my-10" id="features">
       <div className="flex justify-center items-center mt-10">
         <TypewriterEffectSmooth words={featureTitle} />
       </div>

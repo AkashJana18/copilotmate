@@ -44,7 +44,7 @@ const FeedbackSection = () => {
   };
 
   return (
-    <section className="bg-transparent text-white p-8 my-10">
+    <section className="bg-transparent text-white p-8 my-10" id="feedback">
       <h2 className="text-3xl font-bold mb-6 text-center">User Feedback</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {feedbacks.map((feedback) => (

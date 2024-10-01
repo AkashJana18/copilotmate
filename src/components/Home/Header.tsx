@@ -5,15 +5,20 @@ import { placeholders } from "@/data";
 import Link from "next/link";
 
 const Header = () => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {};
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("submitted");
   };
   return (
-    <div className="m-2 px-2 flex items-center justify-between" id="header">
-      <Link href="/" className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+    <div
+      className="m-2 px-2 flex items-center justify-between gap-4"
+      id="header"
+    >
+      <Link
+        href="/"
+        className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4"
+      >
         CopilotMate
       </Link>
       <PlaceholdersAndVanishInput
@@ -21,9 +26,15 @@ const Header = () => {
         onChange={handleChange}
         onSubmit={onSubmit}
       />
+      <div className="flex justify-center items-center gap-4">
+        <Link className="hover:scale-105" href="#features">Features</Link>
+        <Link className="hover:scale-105" href="#faq">FAQ</Link>
+        <Link className="hover:scale-105" href="#feedback">Feedback</Link>
+      </div>
+
       <img
         alt="user img"
-        src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        src="/dp.jpg"
         className="inline w-10 h-10 rounded-full ring-2 ring-slate-200"
       />
     </div>
