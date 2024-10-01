@@ -29,7 +29,7 @@ CopilotMate currently supports the following features:
 
 - [Node.js](https://nodejs.org/) (v14 or later)
 - [Next.js](https://nextjs.org/)
-- [CopilotKit](https://copilotkit.dev/) libraries
+- [CopilotKit](https://docs.copilotkit.ai/what-is-copilotkit) 
 
 ### Steps
 
