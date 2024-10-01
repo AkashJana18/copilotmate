@@ -24,6 +24,7 @@
     "radix-ui": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-slidedown": "^2.4.7",
     "react-spreadsheet": "^0.9.5",
     "tailwind-merge": "^2.5.2"
   },

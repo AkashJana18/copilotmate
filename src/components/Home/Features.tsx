@@ -2,17 +2,16 @@
 import React from "react";
 import { Button } from "@/components/ui/moving-border";
 import { copilotMateFeatures } from "@/data";
+import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import { featureTitle } from "@/data";
 
 const Features = () => {
+  
 
   return (
-    <div className="p-10" id="features">
-      <div className="text-4xl mx-auto font-bold text-neutral-600 dark:text-neutral-200">
-        Unlock Productivity with{" "}
-        <span className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
-          CopilotMate's
-        </span>{" "}
-        Features
+    <div className="p-10" id="features my-10">
+      <div className="flex justify-center items-center mt-10">
+        <TypewriterEffectSmooth words={featureTitle} />
       </div>
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {copilotMateFeatures.map((feature, index) => (

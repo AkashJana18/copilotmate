@@ -1,16 +1,32 @@
+export const faqTitle = [
+  {
+    text: "Frequently",
+  },
+  {
+    text: "Asked",
+  },
+  {
+    text: "Questions",
+    className: "dark:text-purple-500",
+  },
+];
+
+export const featureTitle = [
+  { text: "Unlock" },
+  { text: "Productivity" },
+  { text: "with" },
+  { text: "CopilotMate's", className: "dark:purple-pink-gradient" },
+  { text: "Features" },
+];
+
 export const faq = [
   {
-    id: "0",
-    question: "What features are available in CopilotMate right now?",
+    id: "1",
+    question: "What features are available right now?",
     answer:
       "Currently, the to-do list, spreadsheet, and chatbot features are ready for use. Other features, like expense tracking and calendar tools, are still in development.",
   },
-  {
-    id: "1",
-    question: "Is CopilotMate open-source?",
-    answer:
-      "Yes, CopilotMate is fully open-source. You can contribute to its development, report bugs, or suggest features via our GitHub repository.",
-  },
+ 
   {
     id: "2",
     question: "Can I contribute to CopilotMate?",
@@ -31,7 +47,7 @@ export const faq = [
   },
   {
     id: "5",
-    question: "What are the upcoming features in CopilotMate?",
+    question: "What are the upcoming features?",
     answer:
       "Some upcoming features include expense tracking, calendar integration, study tools, and quiz creation. Stay tuned for regular updates as we continue to develop.",
   },
@@ -55,9 +71,15 @@ export const faq = [
   },
   {
     id: "9",
-    question: "Do you have any corporate or enterprise plans?",
+    question: "Do you have corporate or enterprise plans?",
     answer:
       "At the moment, CopilotMate is focused on individual users, but we're open to expanding based on community feedback.",
+  },
+  {
+    id: "10",
+    question: "Is CopilotMate open-source?",
+    answer:
+      "Yes, CopilotMate is fully open-source. You can contribute to its development, report bugs, or suggest features via our GitHub repository.",
   },
 ];
 
