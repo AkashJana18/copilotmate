@@ -1,3 +1,24 @@
+export const loadingStates = [
+  {
+    text: "Starting your assistant",
+  },
+  {
+    text: "Syncing your tasks",
+  },
+  {
+    text: "Organizing your calendar",
+  },
+  {
+    text: "Preparing study tools",
+  },
+  {
+    text: "Loading your chatbot",
+  },
+  {
+    text: "All set! Welcome to CopilotMate",
+  },
+];
+
 export const faqTitle = [
   {
     text: "Frequently",
@@ -7,7 +28,7 @@ export const faqTitle = [
   },
   {
     text: "Questions",
-    className: "dark:text-purple-500",
+    className: "purple-500 dark:purple-500",
   },
 ];
 
@@ -15,7 +36,7 @@ export const featureTitle = [
   { text: "Unlock" },
   { text: "Productivity" },
   { text: "with" },
-  { text: "CopilotMate's", className: "dark:purple-pink-gradient" },
+  { text: "CopilotMate's", className: "purple-500 dark:purple-500" },
   { text: "Features" },
 ];
 
