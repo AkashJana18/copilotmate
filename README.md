@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# CopilotMate
 
-First, run the development server:
+CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools, including a to-do list manager, expense tracker, calendar, study tools, and more. Built using CopilotKit, it integrates seamlessly with various tasks to help you stay organized and focused.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo](#demo)
+- [Contributing](#contributing)
+- [License](#license)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+CopilotMate currently supports the following features:
 
-## Learn More
+- **To-Do Assistant**: Create, update, and manage your tasks effortlessly.
+- **Spreadsheet**: Organize your data in a spreadsheet format.
+- **Chatbot**: Engage with a chatbot to answer your queries and assist in tasks.
+- **Expense Tracker** (Work In Progress): Track and categorize your daily expenses.
+- **Calendar** (Work In Progress): Keep up with important dates and events.
+- **Study Tools** (Work In Progress): Study planning and quiz creation for focused learning.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [Next.js](https://nextjs.org/)
+- [CopilotKit](https://docs.copilotkit.ai/what-is-copilotkit) 
 
-## Deploy on Vercel
+### Steps
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone this repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/yourusername/copilotmate.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd copilotmate
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the app in your browser:
+
+   ```bash
+   http://localhost:3000
+   ```
+
+## Usage
+
+Once installed, you can access the following features:
+
+- **To-Do Assistant**: Navigate to `/todo` to manage your tasks. You can add, edit, mark complete, and delete tasks.
+  
+- **Spreadsheet**: Access the spreadsheet at `/spreadsheet` to manage your data. Organize your records using rows and columns.
+
+- **Chatbot**: Go to `/chatbot` to interact with the AI-powered assistant for general queries and task automation.
+
+More routes and features are currently being developed.
+
+## Demo
+
+A video demo of CopilotMate can be viewed [here](https://youtube.com/link-to-demo-video).
+
+## Contributing
+
+We welcome contributions from the community! To get started:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and test them thoroughly.
+4. Submit a pull request with a clear description of your changes.
+
+Please refer to our [Contributing Guide](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to adjust this according to your specific project details. Let me know if you'd like to add more sections or customize it further!
