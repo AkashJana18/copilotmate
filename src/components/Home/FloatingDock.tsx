@@ -46,7 +46,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconTimeDurationOff className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://quira.sh/repo/AkashJana18-copilotmate-863038853",
     },
     {
       title: "GitHub",

@@ -15,7 +15,7 @@ const Hero = () => {
           Your <span className="dark:text-neutral-100"> AI Assitant</span>
         </div>
         <div className="flex justify-center items-center">
-          <Link href="#">
+          <Link href="https://quira.sh/repo/AkashJana18-copilotmate-863038853">
             <button className="p-[2px] relative m-10">
               <div className="absolute inset-0 bg-gradient-to-r from-[#66BB79] to-[#9FFF45] rounded-lg" />
               <div className="px-8 py-2 bg-background rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
@@ -31,13 +31,13 @@ const Hero = () => {
               </span>
             </button>
           </Link>
-          <Link href="#">
+          <Link href="https://www.youtube.com/watch?v=8wQuaflOyJw&t=24s&ab_channel=Akash">
             <button className="bg-neutral-200 dark:bg-neutral-800 dark:text-white text-black flex justify-center group relative overflow-hidden mx-10 px-3 py-2 border-2 border-solid border-red-500 rounded-lg">
               <span className="group-hover:translate-x-40 text-center transition duration-500">
                 Watch <span className="text-red-500 font-semibold">Demo</span>
               </span>
               <div className="-translate-x-40 group-hover:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-                <img src="/youtube.png" alt="" width={50}/>
+                <img src="/youtube.png" alt="youtube-logo" width={50}/>
               </div>
             </button>
           </Link>

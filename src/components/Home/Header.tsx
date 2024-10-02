@@ -12,7 +12,7 @@ const Header = () => {
   };
   return (
     <div
-      className="m-2 px-2 flex items-center justify-between gap-4"
+      className="m-2 px-2 flex items-center justify-between gap-4 backdrop-blur-lg"
       id="header"
     >
       <Link
