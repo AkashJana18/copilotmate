@@ -19,9 +19,11 @@ CopilotMate currently supports the following features:
 - **To-Do Assistant**: Create, update, and manage your tasks effortlessly.
 - **Spreadsheet**: Organize your data in a spreadsheet format.
 - **Chatbot**: Engage with a chatbot to answer your queries and assist in tasks.
-- **Expense Tracker** (Work In Progress): Track and categorize your daily expenses.
-- **Calendar** (Work In Progress): Keep up with important dates and events.
-- **Study Tools** (Work In Progress): Study planning and quiz creation for focused learning.
+
+**Upcoming Updates**:
+- **Expense Tracker**: Track and categorize your daily expenses.
+- **Calendar**: Keep up with important dates and events.
+- **Study Tools**: Study planning and quiz creation for focused learning.
 
 ## Installation
 
@@ -77,7 +79,7 @@ More routes and features are currently being developed.
 
 ## Demo
 
-A video demo of CopilotMate can be viewed [here](https://youtube.com/link-to-demo-video).
+A video demo of CopilotMate can be viewed [here](https://youtu.be/8wQuaflOyJw).
 
 ## Contributing
 
