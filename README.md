@@ -1,7 +1,13 @@
 
 # CopilotMate
 
+![image](https://github.com/user-attachments/assets/814f1b4f-821d-47c9-9947-91abf0e2e825)
+
 CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools, including a to-do list manager, expense tracker, calendar, study tools, and more. Built using CopilotKit, it integrates seamlessly with various tasks to help you stay organized and focused.
+
+## Demo
+
+A video demo of CopilotMate can be viewed [here](https://youtu.be/8wQuaflOyJw). 
 
 ## Table of Contents
 
@@ -77,9 +83,6 @@ Once installed, you can access the following features:
 
 More routes and features are currently being developed.
 
-## Demo
-
-A video demo of CopilotMate can be viewed [here](https://youtu.be/8wQuaflOyJw).
 
 ## Contributing
 
