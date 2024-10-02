@@ -21,6 +21,10 @@ export const BackgroundGradient = ({
       backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
     },
   };
+
+  // Function to generate a random duration between 3 and 10 seconds
+  const getRandomDuration = () => Math.random() * (10 - 3) + 3;
+
   return (
     <div className={cn("relative p-[4px] group", containerClassName)}>
       <motion.div
@@ -30,7 +34,7 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
+                duration: getRandomDuration(), // Use the random duration
                 repeat: Infinity,
                 repeatType: "reverse",
               }
@@ -51,7 +55,7 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
+                duration: getRandomDuration(), // Use the random duration
                 repeat: Infinity,
                 repeatType: "reverse",
               }
