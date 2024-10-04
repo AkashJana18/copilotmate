@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { TrashIcon, Edit3Icon } from "lucide-react";
+import { useCopilotReadable, useCopilotAction } from "@copilotkit/react-core";
 
 interface Resource {
   id: number;
@@ -29,11 +30,11 @@ const StudyResources: React.FC = () => {
   }, [resources]);
 
   // Function to add a new resource with a note
-  const addResource = () => {
-    if (newResource.trim() !== "") {
+  const addResource = (name: string, note: string) => {
+    if (name.trim() !== "") {
       setResources([
         ...resources,
-        { id: Date.now(), name: newResource, note: newNote },
+        { id: Date.now(), name, note },
       ]);
       setNewResource("");
       setNewNote(""); // Clear the note field after adding
@@ -54,6 +55,71 @@ const StudyResources: React.FC = () => {
     setResources(updatedResources);
     setEditingId(null); // Exit edit mode
   };
+
+  // Register Copilot Actions for study notes
+
+  useCopilotAction({
+    name: "addStudyResource",
+    description: "Add a new study resource with a note.",
+    parameters: [
+      {
+        name: "name",
+        type: "string",
+        description: "Name of the resource",
+      },
+      {
+        name: "note",
+        type: "string",
+        description: "Additional note for the resource",
+      },
+    ],
+    handler: async ({ name, note }) => {
+      addResource(name, note);
+    },
+  });
+
+  useCopilotAction({
+    name: "deleteStudyResource",
+    description: "Delete a study resource by its ID.",
+    parameters: [
+      {
+        name: "id",
+        type: "number",
+        description: "ID of the resource to delete",
+      },
+    ],
+    handler: async ({ id }) => {
+      removeResource(id);
+    },
+  });
+
+  useCopilotAction({
+    name: "editStudyResourceNote",
+    description: "Edit the note for a study resource.",
+    parameters: [
+      {
+        name: "id",
+        type: "number",
+        description: "ID of the resource to edit",
+      },
+      {
+        name: "note",
+        type: "string",
+        description: "New note for the resource",
+      },
+    ],
+    handler: async ({ id, note }) => {
+
+      setEditingId(id);
+      setEditingNote(note);
+      saveEditedNote(id);
+    },
+  });
+
+  useCopilotReadable({
+    description: "Study notes and resources data",
+    value: resources,
+  });
 
   return (
     <div className="flex-1 p-6 backdrop-blur-lg bg-gradient-to-tr from-white/15 to-transparent border border-white/30 hover:border-white/50 rounded-xl shadow-lg">
@@ -119,7 +185,7 @@ const StudyResources: React.FC = () => {
       </ul>
 
       {/* Add New Resource Section */}
-      <div className="mt-6 flex flex-col  space-y-4">
+      <div className="mt-6 flex flex-col space-y-4">
         <input
           type="text"
           className="flex-1 px-4 py-2 bg-gray-800 text-white rounded-lg border border-gray-600 focus:outline-none"
@@ -133,7 +199,7 @@ const StudyResources: React.FC = () => {
           value={newNote}
           onChange={(e) => setNewNote(e.target.value)}
         />
-        <button className="glow-btn px-4 py-2 w-40" onClick={addResource}>
+        <button className="glow-btn px-4 py-2 w-40" onClick={() => addResource(newResource, newNote)}>
           Add Resource
         </button>
       </div>
