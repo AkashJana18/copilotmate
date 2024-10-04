@@ -1,28 +1,7 @@
 "use client";
 import React, { useState } from "react";
-
-const initialFeedbacks = [
-  {
-    id: 1,
-    text: "CopilotMate has significantly improved my productivity!",
-    author: "John Doe",
-  },
-  {
-    id: 2,
-    text: "The features are intuitive and easy to use. Highly recommended!",
-    author: "Jane Smith",
-  },
-  {
-    id: 3,
-    text: "A great tool for managing tasks efficiently.",
-    author: "Alice Johnson",
-  },
-  {
-    id: 4,
-    text: "Love the AI capabilities in CopilotMate. It helps me stay organized!",
-    author: "Bob Brown",
-  },
-];
+import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import { initialFeedbacks } from "@/data";
 
 const FeedbackSection = () => {
   const [feedbacks, setFeedbacks] = useState(initialFeedbacks);
@@ -42,16 +21,25 @@ const FeedbackSection = () => {
       setText("");
     }
   };
-
+  const words = [
+    {
+      text: "User",
+    },
+    {
+      text: "Feedback",
+    },
+  ];
   return (
-    <section className="text-white p-10 my-10" id="feedback">
-      <div className="bg-transparent bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950">
-        <h2 className="text-3xl font-bold mb-6 text-center">User Feedback</h2>
+    <section className="text-white px-20 my-10 " id="feedback">
+      <div className="bg-transparent bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950 ">
+        <div className="flex justify-center items-center p-5">
+          <TypewriterEffectSmooth words={words} />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {feedbacks.map((feedback) => (
             <div
               key={feedback.id}
-              className="bg-white bg-opacity-10 backdrop-blur-md border border-gray-600 rounded-lg p-4 transition-transform transform hover:scale-105 hover:border-white"
+              className="bg-gradient-to-tr from-slate-800 via-transparent to-transparent backdrop-blur-lg border border-gray-600 rounded-lg p-4 transition-transform transform hover:scale-105 hover:border-slate-500"
             >
               <p className="text-lg italic">"{feedback.text}"</p>
               <p className="mt-2 text-gray-300 text-right">
@@ -63,7 +51,7 @@ const FeedbackSection = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg border border-gray-600"
+          className="bg-gradient-to-tr from-slate-800 via-transparent to-transparent backdrop-blur-md p-6 rounded-lg border border-gray-600 hover:border-slate-500"
         >
           <h3 className="text-xl font-semibold mb-4">Leave Your Feedback</h3>
           <div className="mb-4">
@@ -76,7 +64,7 @@ const FeedbackSection = () => {
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
               required
-              className="w-full p-2 rounded border border-gray-600 bg-transparent text-white"
+              className="w-full p-2 rounded border border-gray-600 bg-transparent text-white hover:border-slate-500"
               placeholder="Your Name"
             />
           </div>
@@ -89,7 +77,7 @@ const FeedbackSection = () => {
               value={text}
               onChange={(e) => setText(e.target.value)}
               required
-              className="w-full p-2 rounded border border-gray-600 bg-transparent text-white"
+              className="w-full p-2 rounded border border-gray-600 bg-transparent text-white hover:border-slate-500"
               rows={4}
               placeholder="Your feedback"
             />
