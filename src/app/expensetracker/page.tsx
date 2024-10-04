@@ -1,7 +1,14 @@
 "use client";
 import { useState, ChangeEvent } from "react";
 import { TrashIcon } from "lucide-react";
-
+import {
+  CopilotKitCSSProperties,
+  CopilotPopup,
+  useCopilotChatSuggestions,
+} from "@copilotkit/react-ui";
+import "@copilotkit/react-ui/styles.css";
+import { useCopilotAction, useCopilotReadable } from "@copilotkit/react-core";
+import { INSTRUCTIONS } from "./instructions";
 
 // Define the expense type
 interface Expense {
@@ -10,6 +17,8 @@ interface Expense {
   amount: number;
   date: string;
 }
+
+
 
 // Expense List Item Component
 function ExpenseItem({
@@ -20,7 +29,7 @@ function ExpenseItem({
   deleteExpense: (id: number) => void;
 }) {
   return (
-    <div className="p-6 rounded-lg backdrop-blur-glass bg-transparent shadow-lg border border-gray-600 flex justify-between items-start hover:border-white/50">
+    <div className="p-6 rounded-lg backdrop-blur-glass bg-neutral-800 shadow-lg border border-gray-600 flex justify-between items-start hover:border-white/50">
       <div>
         <h3 className="text-xl font-semibold mb-2">{expense.name}</h3>
         <p className="text-lg mb-1">$ {expense.amount}</p>
@@ -140,16 +149,33 @@ export default function ExpenseTracker() {
   ]);
 
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [newExpense, setNewExpense] = useState<{ name: string; amount: string; date: string }>({
+  const [newExpense, setNewExpense] = useState<{
+    name: string;
+    amount: string;
+    date: string;
+  }>({
     name: "",
     amount: "",
     date: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setNewExpense({ ...newExpense, [e.target.name]: e.target.value });
-  };
+  // Copilot Readable
+  useCopilotReadable({
+    description: "List of user expenses",
+    value: JSON.stringify(expenses),
+  });
 
+  useCopilotReadable({
+    description: "Today's date",
+    value: new Date().toLocaleDateString(),
+  });
+  useCopilotChatSuggestions({
+    instructions: `
+    Suggest the most relevant actions related to expenses like total, average, max and min.
+  `,
+  }
+  );
+  // Add Expense Function
   const handleAddExpense = () => {
     const { name, amount, date } = newExpense;
     if (name && amount && date) {
@@ -164,16 +190,83 @@ export default function ExpenseTracker() {
     }
   };
 
+  // Delete Expense Function
   const deleteExpense = (id: number) => {
-    setExpenses(expenses.filter((expense) => expense.id !== id));
+    setExpenses((prevExpenses) =>
+      prevExpenses.filter((expense) => expense.id !== id)
+    );
   };
 
+  // Copilot Actions
+  useCopilotAction({
+    name: "addExpense",
+    description: "Adds an expense to the expense list",
+    parameters: [
+      {
+        name: "name",
+        type: "string",
+        description: "The name of the expense",
+        required: true,
+      },
+      {
+        name: "amount",
+        type: "number",
+        description: "The amount of the expense",
+        required: true,
+      },
+      {
+        name: "date",
+        type: "string", // Date in string format (ISO, e.g. "2024-10-04")
+        description: "The date of the expense",
+        required: true,
+      },
+    ],
+    handler: ({ name, amount, date }) => {
+      const parsedAmount = parseFloat(amount); // Convert amount to number
+      const parsedDate = String(date); // Ensure date is a string
+      const parsedName = String(name); // Ensure name is a string
+
+      if (!isNaN(parsedAmount)) {
+        setExpenses((prevExpenses) => [
+          ...prevExpenses,
+          {
+            id: prevExpenses.length + 1,
+            name: parsedName,
+            amount: parsedAmount,
+            date: parsedDate,
+          },
+        ]);
+      } else {
+        console.error("Invalid amount value:", amount);
+      }
+    },
+  });
+
+  useCopilotAction({
+    name: "deleteExpense",
+    description: "Deletes an expense from the expense list",
+    parameters: [
+      {
+        name: "id",
+        type: "number",
+        description: "The ID of the expense to delete",
+        required: true,
+      },
+    ],
+    handler: ({ id }) => {
+      deleteExpense(id);
+    },
+  });
+
   return (
-    <div className="min-h-screen bg-dark text-white p-6">
+    <div className="min-h-screen text-white p-6">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Expense Tracker</h1>
-        <button className="p-[2px] relative m-10" onClick={() => setShowModal(true)}>
+        <button
+          className="p-[2px] relative m-10"
+          onClick={() => setShowModal(true)}
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 rounded-lg" />
           <div className="px-8 py-2 bg-background rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
             + Add Expense
@@ -184,7 +277,11 @@ export default function ExpenseTracker() {
       {/* Expense List */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {expenses.map((expense) => (
-          <ExpenseItem key={expense.id} expense={expense} deleteExpense={deleteExpense} />
+          <ExpenseItem
+            key={expense.id}
+            expense={expense}
+            deleteExpense={deleteExpense}
+          />
         ))}
       </div>
 
@@ -194,8 +291,33 @@ export default function ExpenseTracker() {
         setShowModal={setShowModal}
         handleAddExpense={handleAddExpense}
         newExpense={newExpense}
-        handleChange={handleChange}
+        handleChange={(e) =>
+          setNewExpense({ ...newExpense, [e.target.name]: e.target.value })
+        }
       />
+
+      {/* Copilot Popup */}
+      <div
+        style={
+          {
+            "--copilot-kit-primary-color": "#222222",
+            "--copilot-kit-background-color": "#555555",
+            "--copilot-kit-response-button-background-color": "#444444",
+            "--copilot-kit-response-button-color": "#fff",
+            "--copilot-kit-separator-color": "#666666",
+            "--copilot-kit-muted-color": "#fff",
+          } as CopilotKitCSSProperties
+        }
+      >
+        <CopilotPopup
+          instructions={INSTRUCTIONS}
+          labels={{
+            title: "CopilotMate : Expense Tracker",
+            initial:
+              "Welcome to the AI-assisted Expense Tracker! How can I help you?",
+          }}
+        />
+      </div>
     </div>
   );
 }
