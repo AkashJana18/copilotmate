@@ -60,8 +60,8 @@ export const featureTitle = [
   { text: "Unlock" },
   { text: "Productivity" },
   { text: "with" },
-  { text: "CopilotMate's", className: "text-purple-500 dark:text-purple-500" },
-  { text: "Features" },
+  { text: "CopilotMate", className: "text-purple-500 dark:text-purple-500" },
+
 ];
 
 export const faq = [

@@ -63,8 +63,9 @@ function AddExpenseModal({
   if (!showModal) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-lightGlass backdrop-blur-glass p-6 rounded-lg shadow-lg text-dark max-w-md w-full">
+    <div className="fixed inset-0 flex justify-center items-center">
+      <div className="bg-transparent backdrop-blur-lg p-6 rounded-lg shadow-lg text-dark max-w-md w-full border border-white/30 hover:border-white/50 
+      ">
         <h2 className="text-2xl font-semibold mb-4">Add New Expense</h2>
         <ExpenseForm
           newExpense={newExpense}
@@ -125,7 +126,7 @@ function ExpenseForm({
       </div>
       <div className="flex justify-end space-x-2">
         <button
-          className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg"
+          className="bg-gradient-to-r from-red-600 to-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-lg"
           onClick={() => setShowModal(false)}
         >
           Cancel
@@ -255,7 +256,7 @@ export default function ExpenseTracker() {
   });
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950 text-white p-6">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-950 via-transparent text-white p-6">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Expense Tracker</h1>
