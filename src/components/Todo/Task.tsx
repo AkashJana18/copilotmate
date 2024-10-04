@@ -40,7 +40,7 @@ export function Task({ task: { id, title, status } }: { task: Task }) {
         {title}
       </Label>
       <Button variant="ghost" size="sm" onClick={() => deleteTask(id)}>
-        <div className="hover:bg-red-500 m-1 p-1 rounded-lg">
+        <div className="text-red-500 hover:text-white hover:bg-red-500 m-1 p-1 rounded-lg">
           <TrashIcon className="w-5 h-5" />
         </div>
         <span className="sr-only">Delete</span>

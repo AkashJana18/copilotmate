@@ -100,14 +100,15 @@ img {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   color: white;
-  text-shadow: 0 0 10px #00ffff;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  text-shadow: 0 0 10px #a020f0; /* Bright purple text glow */
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.8), 0 0 30px rgba(160, 32, 240, 0.5); /* Purple glow */
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  box-shadow: 0 0 30px rgb(195, 98, 255), 0 0 40px rgba(160, 32, 240, 1); /* Stronger purple glow on hover */
 }
+
 
 
 }

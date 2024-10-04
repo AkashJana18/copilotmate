@@ -36,7 +36,7 @@ function ExpenseItem({
         <p className="text-sm text-gray-400">{expense.date}</p>
       </div>
       <button
-        className="hover:bg-red-500 m-1 p-1 rounded-lg"
+        className="text-red-500 hover:text-white hover:bg-red-500 p-1 rounded-lg"
         onClick={() => deleteExpense(expense.id)}
       >
         <TrashIcon className="w-5 h-5 text-white" />
