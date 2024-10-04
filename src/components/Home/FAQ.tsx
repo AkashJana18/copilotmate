@@ -8,7 +8,7 @@ import { faqTitle } from "@/data";
 const FAQ = () => {
   
   return (
-    <section className="bg-transparent text-white p-8 my-10 2xl:px-[200px] " id="faq">
+    <section className="text-white p-8 my-10 2xl:px-[200px] " id="faq">
       <div className="flex justify-center items-center mb-10">
         <TypewriterEffectSmooth words={faqTitle} />
       </div>

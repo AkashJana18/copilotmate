@@ -17,7 +17,7 @@ const Header = () => {
     >
       <Link
         href="/"
-        className="text-4xl font-extrabold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4"
+        className="text-4xl font-semibold relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4"
       >
         CopilotMate
       </Link>
