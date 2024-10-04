@@ -29,7 +29,7 @@ function ExpenseItem({
   deleteExpense: (id: number) => void;
 }) {
   return (
-    <div className="p-6 rounded-lg backdrop-blur-glass bg-neutral-800 shadow-lg border border-gray-600 flex justify-between items-start hover:border-white/50">
+    <div className="p-6 rounded-lg backdrop-blur-sm bg-transparent shadow-lg border border-gray-600 flex justify-between items-start hover:border-white/50">
       <div>
         <h3 className="text-xl font-semibold mb-2">{expense.name}</h3>
         <p className="text-lg mb-1">$ {expense.amount}</p>
@@ -165,13 +165,9 @@ export default function ExpenseTracker() {
     value: JSON.stringify(expenses),
   });
 
-  useCopilotReadable({
-    description: "Today's date",
-    value: new Date().toLocaleDateString(),
-  });
   useCopilotChatSuggestions({
     instructions: `
-    Suggest the most relevant actions related to expenses like total, average, max and min.
+    Suggest the most relevant actions related to expenses like total expense, average expense, max expense and min expense.
   `,
   }
   );
@@ -259,7 +255,7 @@ export default function ExpenseTracker() {
   });
 
   return (
-    <div className="min-h-screen text-white p-6">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950 to-black text-white p-6">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Expense Tracker</h1>
