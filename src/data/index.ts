@@ -1,3 +1,27 @@
+export const initialFeedbacks = [
+  {
+    id: 1,
+    text: "CopilotMate has significantly improved my productivity!",
+    author: "John Doe",
+  },
+  {
+    id: 2,
+    text: "The features are intuitive and easy to use. Highly recommended!",
+    author: "Jane Smith",
+  },
+  {
+    id: 3,
+    text: "A great tool for managing tasks efficiently.",
+    author: "Alice Johnson",
+  },
+  {
+    id: 4,
+    text: "Love the AI capabilities in CopilotMate. It helps me stay organized!",
+    author: "Bob Brown",
+  },
+];
+
+
 export const loadingStates = [
   {
     text: "Starting your assistant",
