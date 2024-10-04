@@ -184,23 +184,13 @@ export   const copilotMateFeatures = [
       thumbnail: "/reading.png"
     },
     {
-      title: "Interactive Resume",
+      title: "AI spreadsheet",
       description: "Tailor your resume with AI suggestions, making it job-ready and customized for each role.",
-      thumbnail: "/cv.png"
+      thumbnail: "/frequency.png"
     },
     {
       title: "AI ChatBot",
       description: "Get real-time assistance through a smart AI chatbot that helps with tasks, queries, and more.",
       thumbnail: "/chat-app.png"
     },
-    {
-      title: "Goals Tracker",
-      description: "Set goals and track your progress, staying motivated in fitness, work, or personal life.",
-      thumbnail: "/leadership.png"
-    },
-    {
-      title: "Customizable Workflows",
-      description: "Create workflows that suit your day-to-day needs, tailored to your lifestyle or profession.",
-      thumbnail: "/workflow.png"
-    }
   ];
