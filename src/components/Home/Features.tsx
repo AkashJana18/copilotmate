@@ -9,11 +9,11 @@ const Features = () => {
   
 
   return (
-    <div className="p-10 my-10" id="features">
+    <div className="p-10 my-10 px-[150px]" id="features">
       <div className="flex justify-center items-center mt-10">
         <TypewriterEffectSmooth words={featureTitle} />
       </div>
-      <div className="w-full mt-12 grid lg:grid-cols-3 grid-cols-1 gap-10">
+      <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
         {copilotMateFeatures.map((feature, index) => (
           <Button
             key={index}
