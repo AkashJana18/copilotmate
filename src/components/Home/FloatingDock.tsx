@@ -5,6 +5,7 @@ import {
   IconClipboardList,
   IconFileSpreadsheet,
   IconHome,
+  IconReportMoney,
   IconTerminal2,
   IconTimeDurationOff,
 } from "@tabler/icons-react";
@@ -25,6 +26,13 @@ export function FloatingDockDemo() {
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/chat",
+    },
+    {
+      title: "Expense Tracker",
+      icon: (
+        <IconReportMoney className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/expensetracker",
     },
     {
       title: "Spreadsheet",
