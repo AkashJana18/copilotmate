@@ -82,5 +82,32 @@ img {
     background-repeat: no-repeat; /* 'bg-no-repeat' */
     background-image: linear-gradient(to right, #a855f7, #8b5cf6, #ec4899);
   }
+  /* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow Button */
+.glow-btn {
+  background-color: #1a202c;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 0 10px #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
 
 }
