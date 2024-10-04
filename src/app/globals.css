@@ -83,10 +83,4 @@ img {
     background-image: linear-gradient(to right, #a855f7, #8b5cf6, #ec4899);
   }
 
-  .text-ppg {
-    background-clip: text;
-    -webkit-background-clip: text; /* For Safari */
-    color: transparent;
-    background-image: linear-gradient(to right, #a855f7, #8b5cf6, #ec4899);
-  }
 }

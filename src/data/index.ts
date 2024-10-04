@@ -52,7 +52,7 @@ export const faqTitle = [
   },
   {
     text: "Questions",
-    className: "purple-500 dark:purple-500",
+    className: "text-indigo-500 dark:text-indigo-500",
   },
 ];
 
@@ -60,7 +60,7 @@ export const featureTitle = [
   { text: "Unlock" },
   { text: "Productivity" },
   { text: "with" },
-  { text: "CopilotMate's", className: "purple-500 dark:purple-500" },
+  { text: "CopilotMate's", className: "text-purple-500 dark:text-purple-500" },
   { text: "Features" },
 ];
 
