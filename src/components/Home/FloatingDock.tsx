@@ -1,6 +1,7 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
+  IconBook,
   IconBrandGithub,
   IconClipboardList,
   IconFileSpreadsheet,
@@ -19,14 +20,14 @@ export function FloatingDockDemo() {
       ),
       href: "/",
     },
-
     {
-      title: "Chatbot",
+      title: "Study Buddy",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/chat",
+      href: "/study-buddy",
     },
+
     {
       title: "Expense Tracker",
       icon: (
@@ -48,6 +49,14 @@ export function FloatingDockDemo() {
       ),
       href: "/todo",
     },
+    
+    {
+      title: "Chatbot",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/chat",
+    },
 
     {
       title: "Vote",
@@ -63,6 +72,7 @@ export function FloatingDockDemo() {
       ),
       href: "https://github.com/AkashJana18/copilotmate",
     },
+    
   ];
   return (
     <div className="flex items-center justify-center fixed bottom-12 inset-x-0 mx-auto z-10">
