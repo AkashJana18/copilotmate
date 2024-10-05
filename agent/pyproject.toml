@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "ai_researcher"
+version = "0.1.0"
+description = "AI Researcher Demo"
+authors = ["Markus Ecker <markus.ecker@gmail.com>"]
+license = "MIT"
+
+[project]
+name = "ai_researcher"
+version = "0.0.1"
+dependencies = [
+  "langgraph",
+  "langchain_core",
+  "langchain_openai",
+  "langchain",
+  "openai",
+  "langchain-community",
+  "tavily-python",
+  "copilotkit",
+  "python-dotenv",
+  "uvicorn",
+]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langgraph = "^0.2.34"
+langchain-core = "^0.3.8"
+langchain-openai = "^0.2.1"
+langchain = "^0.3.1"
+openai = "^1.51.0"
+langchain-community = "^0.3.1"
+tavily-python = "^0.5.0"
+copilotkit = "0.1.18"
+python-dotenv = "^1.0.1"
+uvicorn = "^0.31.0"
+langchain-anthropic = "^0.2.1"
+
+
+[tool.poetry.scripts]
+demo = "ai_researcher.demo:main"
