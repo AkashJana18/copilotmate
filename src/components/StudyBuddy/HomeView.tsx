@@ -18,7 +18,7 @@ export function HomeView() {
     useResearchContext();
   const [isInputFocused, setIsInputFocused] = useState(false);
   const { run: runResearchAgent } = useCoAgent({
-    name: "search_agent",
+    name: "studybuddy_agent",
   });
 
   const handleResearch = (query: string) => {
@@ -27,11 +27,11 @@ export function HomeView() {
   };
 
   const suggestions = [
-    { label: "Electric cars sold in 2024 vs 2023", icon: "🚙" },
-    { label: "Top 10 richest people in the world", icon: "💰" },
-    { label: "Population of the World", icon: "🌍 " },
-    { label: "Weather in Seattle VS New York", icon: "⛅️" },
-  ];
+    { label: "Effective study techniques for group learning", icon: "📚" },
+    { label: "Best apps for collaborative note-taking", icon: "📝" },
+    { label: "Top resources for mastering difficult subjects", icon: "🎓" },
+    { label: "Creating a study schedule that works for everyone", icon: "📅" },
+];
 
   return (
     <motion.div
@@ -39,17 +39,17 @@ export function HomeView() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="h-screen w-full flex flex-col gap-y-2 justify-center items-center p-4 lg:p-0"
+      className="m-10 w-full flex flex-col  justify-center items-center p-4 lg:p-0"
     >
-      <h1 className="text-4xl font-extralight mb-6">
-        What would you like to know?
+      <h1 className="text-4xl mb-6 font-semibold" id="study-buddy">
+         Your AI study Companion - <span className="purple-pink-gradient hover:font-bold">StudyBuddy</span> 
       </h1>
 
       <div
         className={cn(
-          "w-full bg-slate-100/50 border shadow-sm rounded-md transition-all",
+          "w-full bg-transparent border shadow-sm rounded-md transition-all",
           {
-            "ring-1 ring-slate-300": isInputFocused,
+            "ring-1 ring-indigo-700": isInputFocused,
           }
         )}
       >
@@ -85,17 +85,18 @@ export function HomeView() {
             })}
             onClick={() => handleResearch(researchInput)}
           >
-            Research
+            Search
             <CornerDownLeftIcon className="w-4 h-4 ml-2" />
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-2 w-full gap-2 text-sm">
+      <div className="grid grid-cols-1 w-full gap-6 my-5 px-20 text-sm">
         {suggestions.map((suggestion) => (
           <div
             key={suggestion.label}
             onClick={() => handleResearch(suggestion.label)}
-            className="p-2 bg-slate-100/50 rounded-md border col-span-2 lg:col-span-1 flex cursor-pointer items-center space-x-2 hover:bg-slate-100 transition-all duration-300"
+            className="p-2 text-xl bg-transparent rounded-md border-2 border-indigo-300 col-span-2 lg:col-span-1 flex cursor-pointer items-center space-x-2 hover:border-purple-500 hover:border-2 hover:shadow-lg hover:shadow-purple-500 transition-all hover:scale-105 duration-300"
+
           >
             <span className="text-base">{suggestion.icon}</span>
             <span className="flex-1">{suggestion.label}</span>

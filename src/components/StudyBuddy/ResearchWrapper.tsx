@@ -8,7 +8,7 @@ export function ResearchWrapper() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center relative z-10">
+      <div className="w-3/4 flex flex-col items-center justify-center relative z-10 bg-transparent backdrop-blur-lg border border-white/30 rounded-lg p-20">
         <div className="flex-1">
           {researchQuery ? (
             <AnimatePresence
