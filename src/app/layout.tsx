@@ -32,7 +32,7 @@ export default function RootLayout({
           <Spotlight className="-top-20 left-1/2 h-screen" fill="purple" /> 
         </div>
 
-        <CopilotKit runtimeUrl="/api/copilotkit" agent="studybuddy_agent">
+        <CopilotKit runtimeUrl="/api/copilotkit">
           <Header />
           {children}
           <FloatingDockDemo />

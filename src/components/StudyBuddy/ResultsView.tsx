@@ -7,7 +7,6 @@ import { SkeletonLoader } from "./SkeletonLoader";
 import { useCoAgent } from "@copilotkit/react-core";
 import { Progress } from "./Progress";
 import { AnswerMarkdown } from "./AnswerMarkdown";
-import Link from "next/link";
 
 export function ResultsView() {
   const { researchQuery } = useResearchContext();
@@ -88,14 +87,12 @@ export function ResultsView() {
           )}
         </div>
         <div className="flex justify-center">
-          <Link href="http://localhost:3000/">
-            <button className="relative w-fit inline-flex h-12 overflow-hidden rounded-lg p-[2px]  ">
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#8B5CF6_0%,#EC4899_50%,#8B5CF6_100%)]" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-neutral-950 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                Return
-              </span>
-            </button>
-          </Link>
+          <button className="relative w-fit inline-flex h-12 overflow-hidden rounded-lg p-[2px]" onClick={()=>window.location.reload()} >
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#8B5CF6_0%,#EC4899_50%,#8B5CF6_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-neutral-950 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+              Return
+            </span>
+          </button>
         </div>
       </div>
     </motion.div>
