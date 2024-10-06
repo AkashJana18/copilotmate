@@ -26,12 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <div className="overflow-hidden">
-          <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"fill="#8b5cf6"/>
-          <Spotlight className="top-28 left-80 h-[80vh] " fill="#a855f7" />
-          <Spotlight className="-top-20 left-1/2 h-screen" fill="purple" /> 
-        </div>
-
+        <Spotlight
+          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+          fill="#8b5cf6"
+        />
+        <Spotlight className="top-28 left-80 h-[80vh] " fill="#a855f7" />
+        <Spotlight className="-top-20 left-1/2 h-screen" fill="purple" />
         <CopilotKit runtimeUrl="/api/copilotkit">
           <Header />
           {children}

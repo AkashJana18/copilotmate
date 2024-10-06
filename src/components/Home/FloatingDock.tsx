@@ -21,6 +21,13 @@ export function FloatingDockDemo() {
       href: "/",
     },
     {
+      title: "Chatbot",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/chat",
+    },
+    {
       title: "Study Buddy",
       icon: (
         <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
@@ -50,13 +57,7 @@ export function FloatingDockDemo() {
       href: "/todo",
     },
     
-    {
-      title: "Chatbot",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/chat",
-    },
+  
 
     {
       title: "Vote",
