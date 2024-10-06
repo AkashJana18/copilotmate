@@ -1,0 +1,16 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+      "langgraph",
+      "langchain",
+      "perplexity",
+      "ainvoke",
+      "pydantic",
+      "tavily",
+      "copilotkit",
+      "fastapi",
+      "uvicorn",
+      "checkpointer"
+    ]
+  }
