@@ -13,14 +13,14 @@ const Sidebar = ({
   setSelectedSpreadsheetIndex,
 }: SidebarProps) => {
   return (
-    <div className="w-64 h-screen bg-gray-800 text-white overflow-auto p-5">
+    <div className="w-64 h-screen bg-neutral-800 text-white overflow-auto p-5">
       <ul>
         {spreadsheets.map((spreadsheet, index) => (
           <li
             key={index}
             className={`mb-4 cursor-pointer ${
               index === selectedSpreadsheetIndex
-                ? "ring-2 ring-blue-500 ring-inset p-3 rounded-lg"
+                ? "ring-2 ring-purple-500 ring-inset p-3 rounded-lg"
                 : "p-3"
             }`}
             onClick={() => setSelectedSpreadsheetIndex(index)}

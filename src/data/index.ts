@@ -193,8 +193,8 @@ export   const copilotMateFeatures = [
 
     },
     {
-      title: "Calendars",
-      description: "Create, manage, and sync calendars for effortless scheduling and time management.",
+      title: "Daily Task Summary",
+      description: "At the end of the day, provide a brief summary of tasks completed, reminders for the next day, or undone to-dos.",
       thumbnail: "/product-release.png"
     },
     {
