@@ -5,11 +5,11 @@ import {
   CopilotKitCSSProperties,
   useCopilotChatSuggestions,
 } from "@copilotkit/react-ui";
-import { INSTRUCTION } from "./instructions";
+import { INSTRUCTIONS } from "./instructions";
 
 const Page = () => {
   useCopilotChatSuggestions({
-    instructions: `Suggest good chatting topics related to LLM.`,
+    instructions: `Suggest questions what can you do?`,
   });
 
   return (
@@ -36,7 +36,7 @@ const Page = () => {
           }
         >
           <CopilotChat
-            instructions={INSTRUCTION}
+            instructions={INSTRUCTIONS}
             labels={{
               title: "CopilotMate",
               initial:
