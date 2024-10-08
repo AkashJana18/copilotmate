@@ -6,7 +6,7 @@ import { CopilotKit } from "@copilotkit/react-core";
 
 export default function Home() {
   return (
-    <CopilotKit agent="studybuddy_agent">
+    <CopilotKit runtimeUrl="api/copilotkit" agent="studybuddy_agent">
       <main className="flex flex-col items-center justify-between">
         <ResearchProvider>
           <ResearchWrapper />
