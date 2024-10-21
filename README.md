@@ -13,7 +13,7 @@ CopilotMate is an open-source personal assistant designed to streamline producti
 Read more about CopilotMate in our detailed blog posts:
 1. [CopilotMate Blog](https://dev.to/akashjana/future-of-productivity-meet-copilotmate-3k7i) 
 2. [CopilotMate Development Journey](https://dev.to/akashjana/how-i-integrated-copilotkit-ai-into-copilotmate-23gm)
-Also, don't forget to support on [Twitter](https://x.com/Akashj_01/status/1843662122917736475).
+3. Also, don't forget to support on [Twitter](https://x.com/Akashj_01/status/1843662122917736475) and [Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:7254023926891065346/).
 
 
 ## Table of Contents
