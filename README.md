@@ -5,9 +5,16 @@
 
 CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools. Whether you're organizing your tasks, tracking expenses, or studying efficiently, CopilotMate has your back! Built using **CopilotKit**, it integrates seamlessly to help you stay organized and focused.
 
-## Demo
+[![Watch the video](https://img.youtube.com/vi/qPVRPUH8ewU/maxresdefault.jpg)](https://youtu.be/qPVRPUH8ewU)
+### [Watch video on YouTube](https://youtu.be/qPVRPUH8ewU)
 
-A video demo of CopilotMate can be viewed [here](https://www.youtube.com/watch?v=qPVRPUH8ewU)).
+
+## Blog
+Read more about CopilotMate in our detailed blog posts:
+1. [CopilotMate Blog](https://dev.to/akashjana/future-of-productivity-meet-copilotmate-3k7i) 
+2. [CopilotMate Development Journey](https://dev.to/akashjana/how-i-integrated-copilotkit-ai-into-copilotmate-23gm)
+3. Also, don't forget to support on [Twitter](https://x.com/Akashj_01/status/1843662122917736475) and [Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:7254023926891065346/).
+
 
 ## Table of Contents
 
@@ -130,6 +137,4 @@ Please refer to our [Contributing Guide](CONTRIBUTING.md) for more details.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
-Feel free to customize the paths or any details according to your project structure!
