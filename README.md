@@ -17,7 +17,6 @@ CopilotMate is an open-source personal assistant designed to streamline producti
 - **Groq SDK** (for language models)
 - **Llama model** (for AI coagents)
 
-[![Watch the video](https://img.youtube.com/vi/qPVRPUH8ewU/maxresdefault.jpg)](https://youtu.be/qPVRPUH8ewU)
 ### [Watch video on YouTube](https://youtu.be/qPVRPUH8ewU)
 
 ### Screenshot 
