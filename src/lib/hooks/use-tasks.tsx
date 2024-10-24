@@ -2,14 +2,15 @@
 import { useCopilotAction, useCopilotReadable } from "@copilotkit/react-core";
 import { createContext, useContext, useState, ReactNode } from "react";
 import { defaultTasks } from "../default-tasks";
-import { Task, TaskStatus } from "../tasks.types";
+import { Task, TaskStatus, TaskPriority } from "../tasks.types"; // Import TaskPriority
 
 let nextId = defaultTasks.length + 1;
 
 type TasksContextType = {
   tasks: Task[];
-  addTask: (title: string) => void;
+  addTask: (title: string, priority?: TaskPriority) => void; // Add priority parameter
   setTaskStatus: (id: number, status: TaskStatus) => void;
+  setTaskPriority: (id: number, priority: TaskPriority) => void; // New function for setting priority
   deleteTask: (id: number) => void;
 };
 
@@ -33,9 +34,16 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
         description: "The title of the task",
         required: true,
       },
+      {
+        name: "priority", // Add priority parameter
+        type: "string",
+        description: "The priority of the task",
+        enum: Object.values(TaskPriority), // Ensure it uses enum values
+        required: false, // Optional parameter
+      },
     ],
-    handler: async ({ title }) => {
-      addTask(title);
+    handler: async ({ title, priority }) => {
+      addTask(title, priority || TaskPriority.medium); // Default priority to medium if not provided
       return "Task added successfully";
     },
     render: "Processing..."
@@ -79,13 +87,39 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
     ],
     handler: async ({ id, status }) => {
       setTaskStatus(id, status);
-      return "Set status successfull";
+      return "Set status successful";
     },
     render: "Processing..."
   });
 
-  const addTask = (title: string) => {
-    setTasks([...tasks, { id: nextId++, title, status: TaskStatus.todo }]);
+  // New Action to Update Task Priority
+  useCopilotAction({
+    name: "setTaskPriority",
+    description: "Sets the priority of a task",
+    parameters: [
+      {
+        name: "id",
+        type: "number",
+        description: "The id of the task",
+        required: true,
+      },
+      {
+        name: "priority",
+        type: "string",
+        description: "The priority of the task",
+        enum: Object.values(TaskPriority), // Use the TaskPriority enum
+        required: true,
+      },
+    ],
+    handler: async ({ id, priority }) => {
+      setTaskPriority(id, priority);
+      return "Task priority updated successfully";
+    },
+    render: "Processing..."
+  });
+
+  const addTask = (title: string, priority: TaskPriority = TaskPriority.medium) => {
+    setTasks([...tasks, { id: nextId++, title, status: TaskStatus.todo, priority }]);
   };
 
   const setTaskStatus = (id: number, status: TaskStatus) => {
@@ -96,12 +130,20 @@ export const TasksProvider = ({ children }: { children: ReactNode }) => {
     );
   };
 
+  const setTaskPriority = (id: number, priority: TaskPriority) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, priority } : task
+      )
+    );
+  };
+
   const deleteTask = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
-  
+
   return (
-    <TasksContext.Provider value={{ tasks, addTask, setTaskStatus, deleteTask }}>
+    <TasksContext.Provider value={{ tasks, addTask, setTaskStatus, setTaskPriority, deleteTask }}>
       {children}
     </TasksContext.Provider>
   );
