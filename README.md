@@ -3,6 +3,10 @@
 ![image](https://github.com/user-attachments/assets/31b93ec2-94c9-4949-96a3-160018fd4311)
 CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools. Whether you're organizing your tasks, tracking expenses, or studying efficiently, CopilotMate has your back! Built using **CopilotKit**, it integrates seamlessly to help you stay organized and focused.
 
+> **Note:**
+> Due to major updates in CoAgents and CopilotKit AI, the agent may not function as expected. Please review the latest changes before use. 
+
+
 ### 🛠️ Technologies Being Used  
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-black?logo=next.js" alt="Next.js" />
@@ -44,7 +48,7 @@ Read more about CopilotMate in our detailed blog posts:
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Demo](#demo)
+- [Demo](https://youtu.be/qPVRPUH8ewU?si=R9TqpgmkYOL8n5lf)
 - [Contributing](#contributing)
 - [License](#license)
 
