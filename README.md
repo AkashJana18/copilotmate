@@ -24,17 +24,18 @@ CopilotMate is an open-source personal assistant designed to streamline producti
 ### [Watch video on YouTube](https://youtu.be/qPVRPUH8ewU)
 
 ### Screenshot 
-![image](https://github.com/user-attachments/assets/68df962c-9bc2-48ae-9ffd-3c073f13e083)
-![image](https://github.com/user-attachments/assets/5d78657c-fa78-492c-bbf8-d2dcdf6fa699)
-![image](https://github.com/user-attachments/assets/1fe3ea5e-4a34-4755-a042-d327adc17c8e)
-![image](https://github.com/user-attachments/assets/0f1fa245-10bb-441c-be77-162a04f941d8)
-![image](https://github.com/user-attachments/assets/10814ebf-95ed-4520-966c-5e5854c46335)
-![image](https://github.com/user-attachments/assets/cee8e3ca-ecfa-43d1-adf0-8f8972c4c14b)
-![image](https://github.com/user-attachments/assets/39e2087c-0f7d-4a69-9fbe-e30415fd7cbe)
-![image](https://github.com/user-attachments/assets/9919059e-71ce-4bb0-9f50-cc9f351078be)
-![image](https://github.com/user-attachments/assets/0ccd162a-c4f7-4d79-a969-a124222f5bf6)
-![image](https://github.com/user-attachments/assets/cb118098-d975-41fe-b1d8-0387d312ca32)
-![image](https://github.com/user-attachments/assets/d5ba6011-71e3-4f7b-8566-e27cc83c35ac)
+<img src="https://github.com/user-attachments/assets/68df962c-9bc2-48ae-9ffd-3c073f13e083" alt="Image 1" width="200"/>
+<img src="https://github.com/user-attachments/assets/5d78657c-fa78-492c-bbf8-d2dcdf6fa699" alt="Image 2" width="200"/>
+<img src="https://github.com/user-attachments/assets/1fe3ea5e-4a34-4755-a042-d327adc17c8e" alt="Image 3" width="200"/>
+<img src="https://github.com/user-attachments/assets/0f1fa245-10bb-441c-be77-162a04f941d8" alt="Image 4" width="200"/>
+<img src="https://github.com/user-attachments/assets/10814ebf-95ed-4520-966c-5e5854c46335" alt="Image 5" width="200"/>
+<img src="https://github.com/user-attachments/assets/cee8e3ca-ecfa-43d1-adf0-8f8972c4c14b" alt="Image 6" width="200"/>
+<img src="https://github.com/user-attachments/assets/39e2087c-0f7d-4a69-9fbe-e30415fd7cbe" alt="Image 7" width="200"/>
+<img src="https://github.com/user-attachments/assets/9919059e-71ce-4bb0-9f50-cc9f351078be" alt="Image 8" width="200"/>
+<img src="https://github.com/user-attachments/assets/0ccd162a-c4f7-4d79-a969-a124222f5bf6" alt="Image 9" width="200"/>
+<img src="https://github.com/user-attachments/assets/cb118098-d975-41fe-b1d8-0387d312ca32" alt="Image 10" width="200"/>
+<img src="https://github.com/user-attachments/assets/d5ba6011-71e3-4f7b-8566-e27cc83c35ac" alt="Image 11" width="200"/>
+
 
 ## Blog
 Read more about CopilotMate in our detailed blog posts:
