@@ -1,5 +1,12 @@
 
 # CopilotMate
+![GitHub Repo stars](https://img.shields.io/github/stars/AkashJana18/copilotmate?style=social)
+![GitHub forks](https://img.shields.io/github/forks/akashjana18/copilotmate?style=social)
+![YouTube Video Views](https://img.shields.io/youtube/views/qPVRPUH8ewU?style=social)
+![GitHub License](https://img.shields.io/github/license/akashjana18/copilotmate?style=social)
+
+
+
 ![image](https://github.com/user-attachments/assets/31b93ec2-94c9-4949-96a3-160018fd4311)
 CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools. Whether you're organizing your tasks, tracking expenses, or studying efficiently, CopilotMate has your back! Built using **CopilotKit**, it integrates seamlessly to help you stay organized and focused.
 
